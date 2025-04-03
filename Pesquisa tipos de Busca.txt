@@ -1,0 +1,35 @@
+Busca Gulosa
+Como funciona:
+
+Sempre escolhe o próximo passo que parece estar mais perto do objetivo, baseado apenas em uma estimativa chamada heurística (h(n)).
+
+Não leva em conta o caminho já percorrido.
+
+Pode chegar ao objetivo, mas não garante que seja o caminho mais curto.
+
+Fórmula usada:
+
+f(n) = h(n)
+
+Exemplo simples: Se você está tentando sair de um labirinto, a busca gulosa olha para os caminhos e escolhe o que parece mais próximo da saída, sem pensar no quanto já andou.
+
+https://evolvers.com.br/explorando-busca-gulosa/#:~:text=A%20Busca%20Gulosa%20é%20uma,assegura%20a%20melhor%20solução%20possível.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Busca A* (A Estrela)
+Como funciona:
+
+Escolhe o caminho com base na soma do custo já percorrido (g(n)) e da estimativa até o objetivo (h(n)).
+
+Considera tanto o caminho feito quanto o que falta.
+
+Com uma boa heurística, sempre encontra o caminho mais curto.
+
+Fórmula usada:
+
+f(n) = g(n) + h(n)
+
+Exemplo simples: No mesmo labirinto, a busca A* vai escolher o caminho que já foi mais curto até agora e ainda parece levar mais rápido até a saída.
+
+https://evolvers.com.br/desvendando-algoritmo-a/
