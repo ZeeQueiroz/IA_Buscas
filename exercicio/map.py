@@ -36,62 +36,54 @@ class Graph:
     contenda = Vertex("Contenda", 39)
 
     porto_uniao.add_adjacent(Adjacent(paulo_frontin, 46))
-    porto_uniao.add_adjacent(Adjacent(canoinhas, 78))
-    porto_uniao.add_adjacent(Adjacent(sao_mateus_do_sul, 87))
+    porto_uniao.add_adjacent(Adjacent(sao_mateus_sul, 87))
+    porto_uniao.add_adjacent(Adjacent(canoinha, 78))
 
-    paulo_frontin.add_adjacent(Adjacent(porto_uniao, 46))
     paulo_frontin.add_adjacent(Adjacent(irati, 75))
+    paulo_frontin.add_adjacent(Adjacent(porto_uniao,46))
 
-    irati.add_adjacent(Adjacent(paulo_frontin, 75))
-    irati.add_adjacent(Adjacent(sao_mateus_do_sul, 57))
     irati.add_adjacent(Adjacent(palmeira, 75))
+    irati.add_adjacent(Adjacent(sao_mateus_sul, 57))
+    irati.add_adjacent(Adjacent(paulo_frontin, 75))
 
-    sao_mateus_do_sul.add_adjacent(Adjacent(irati, 57))
-    sao_mateus_do_sul.add_adjacent(Adjacent(porto_uniao, 87))
-    sao_mateus_do_sul.add_adjacent(Adjacent(tres_barras, 43))
+    sao_mateus_sul.add_adjacent(Adjacent(porto_uniao, 87))
+    sao_mateus_sul.add_adjacent(Adjacent(irati,  57))
+    sao_mateus_sul.add_adjacent(Adjacent(tres_barras, 43))
+    sao_mateus_sul.add_adjacent(Adjacent(palmeira, 77))
+    sao_mateus_sul.add_adjacent(Adjacent(lapa, 60))
+    
+    tres_barras.add_adjacent(Adjacent(canoinha, 12))
+    tres_barras.add_adjacent(Adjacent(sao_mateus_sul, 43))
 
-    tres_barras.add_adjacent(Adjacent(sao_mateus_do_sul, 43))
-    tres_barras.add_adjacent(Adjacent(canoinhas, 12))
+    canoinha.add_adjacent(Adjacent(porto_uniao, 78))
+    canoinha.add_adjacent(Adjacent(tres_barras, 12))
+    canoinha.add_adjacent(Adjacent(mafra, 66))
 
-    canoinhas.add_adjacent(Adjacent(tres_barras, 12))
-    canoinhas.add_adjacent(Adjacent(porto_uniao, 78))
-    canoinhas.add_adjacent(Adjacent(mafra, 66))
-
-    mafra.add_adjacent(Adjacent(canoinhas, 66))
+    mafra.add_adjacent(Adjacent(canoinha, 60))
     mafra.add_adjacent(Adjacent(lapa, 57))
     mafra.add_adjacent(Adjacent(tijucas_do_sul, 99))
 
     lapa.add_adjacent(Adjacent(mafra, 57))
-    lapa.add_adjacent(Adjacent(contenda, 60))
+    lapa.add_adjacent(Adjacent(sao_mateus_sul, 60))
+    lapa.add_adjacent(Adjacent(contenda,26))
 
-    contenda.add_adjacent(Adjacent(lapa, 60))
     contenda.add_adjacent(Adjacent(balsa_nova, 19))
-    contenda.add_adjacent(Adjacent(araucaria, 26))
+    contenda.add_adjacent(Adjacent(araucaria, 18))
+    contenda.add_adjacent(Adjacent(lapa, 26))
 
-    balsa_nova.add_adjacent(Adjacent(contenda, 19))
-    balsa_nova.add_adjacent(Adjacent(campo_largo, 22))
-
-    campo_largo.add_adjacent(Adjacent(balsa_nova, 22))
-    campo_largo.add_adjacent(Adjacent(palmeira, 55))
-
-    palmeira.add_adjacent(Adjacent(campo_largo, 55))
-    palmeira.add_adjacent(Adjacent(irati, 75))
-    palmeira.add_adjacent(Adjacent(sao_mateus_do_sul, 77))
-
-    araucaria.add_adjacent(Adjacent(contenda, 26))
+    araucaria.add_adjacent(Adjacent(contenda, 18))     
     araucaria.add_adjacent(Adjacent(curitiba, 37))
-    araucaria.add_adjacent(Adjacent(sao_jose_dos_pinhas, 18))
 
-    curitiba.add_adjacent(Adjacent(araucaria, 37))
-    curitiba.add_adjacent(Adjacent(balsa_nova, 51))
-    curitiba.add_adjacent(Adjacent(sao_jose_dos_pinhas, 15))
-    curitiba.add_adjacent(Adjacent(campo_largo, 29))
+    palmeira.add_adjacent(Adjacent(irati, 75))
+    palmeira.add_adjacent(Adjacent(campo_largo, 55))
+    palmeira.add_adjacent(Adjacent(sao_mateus_sul, 77))
 
-    sao_jose_dos_pinhas.add_adjacent(Adjacent(curitiba, 15))
-    sao_jose_dos_pinhas.add_adjacent(Adjacent(araucaria, 18))
-    sao_jose_dos_pinhas.add_adjacent(Adjacent(tijucas_do_sul, 49))
-
-    tijucas_do_sul.add_adjacent(Adjacent(sao_jose_dos_pinhas, 49))
     tijucas_do_sul.add_adjacent(Adjacent(mafra, 99))
+    tijucas_do_sul.add_adjacent(Adjacent(sao_jose_dos_pinhais, 49))
+    
+    campo_largo.add_adjacent(Adjacent(palmeira, 55))
+    campo_largo.add_adjacent(Adjacent(curitiba, 29))
+    campo_largo.add_adjacent(Adjacent(balsa_nova,22))
 
-
+    sao_jose_dos_pinhais.add_adjacent(Adjacent(tijucas_do_sul, 49))
+    sao_jose_dos_pinhais.add_adjacent(Adjacent(curitiba, 15))
